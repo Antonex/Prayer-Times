@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+2&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.header {
+  font-family: 'M PLUS 2';
+  color: #1c7947;
+  font-weight: 800;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  background-image: linear-gradient(to bottom right, #1c7947, #80ed99);
+  min-height: 100vh;
+  min-width: 100vw;
+  flex-direction: column;
+  align-items: center;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+  overflow-y: hidden;
+}
+
+.container .current-time {
+  margin-top: 1em;
+  height: 50px;
+  width: 70%;
+  background-color: #8fe889;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5em;
+}
+
+.container .current-time .time-text {
+  font-weight: 800;
+  font-size: 30px;
+  color: #38a559;
+}
+
+.container .current-date {
+  margin-top: 1em;
+  height: 50px;
+  width: 60%;
+  background-color: #8fe889;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5em;
+  padding: 0.5em;
+}
+
+.container .current-date .date-text {
+  font-weight: 800;
+  font-size: 20px;
+  color: #38a559;
+}
+
+.container i {
+  color: rgb(100, 200, 0);
+}
+
+.container .current-location {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  height: 50px;
+  width: 50%;
+  background-color: #8fe889;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5em;
+  padding: 20px;
+}
+
+.container .current-location .location-text {
+  font-weight: 800;
+  font-size: 20px;
+  color: #38a559;
+}
+
+.container .input-field {
+  margin-top: 1em;
+}
+
+.container #input-field {
+  border: none;
+  font-size: 20px;
+  color: #38a559;
+  background-color: #8fe889;
+  text-align: center;
+  padding: 0.5em;
+  border-radius: 1em;
+  font-family: 'Anton', sans-serif;
+}
+
+.container .btn {
+  padding: 0.5em;
+  border-radius: 1em;
+  font-family: 'Poppins', sans-serif;
+  background-color: #80ed99;
+  color: #38a559;
+  border: none;
+  font-size: 20px;
+}
+
+.container .current-location .current-country-text {
+  border: none;
+  font-size: 20px;
+  color: #38a559;
+  display: flex;
+  align-items: center;
+  font-family: 'Anton', sans-serif;
+}
+
+.alert {
+  background-color: #f1392c;
+  color: rgb(126, 244, 187);
+  font-family: 'M PLUS 2', sans-serif;
+  font-weight: 800;
+  padding: 1em;
+  border-radius: 5em;
+  margin-bottom: 2em;
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.fa-clock,
+.fa-map-marker-alt,
+.fa-calendar-day {
+  font-size: 2em;
+  padding-right: 0.2em;
+}
+
+.container .salat-times {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .salat-times .time {
+  background-color: #80ed99;
+  margin: 0.5em;
+  height: auto;
+  width: auto;
+  border-radius: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container .salat-times .salat-time,
+.salat-name {
+  font-size: 20px;
+  padding: 0 1.5em;
+}
+
+.container .salat-times .salat-name {
+  padding-top: 0.5em;
+}
+
+.container .salat-times .salat-time {
+  padding-bottom: 0.5em;
+}
+
+.container .salat-times .salat-name {
+  font-family: 'Anton', sans-serif;
+  font-weight: 800;
+  font-size: 2em;
+  color: #1c7947;
+}
+
+.container .salat-times .salat-time {
+  font-family: 'M PLUS 2', sans-serif;
+  font-weight: 800;
+  color: #38a559;
+  font-size: 1.5em;
+}
+
+.nav-bar {
+  margin: 1.5em 0;
+}
+
+.nav-bar a {
+  padding: 1em;
+  background-color: #80ed99;
+  border-radius: 1.5em;
+  text-decoration: none;
+  font-family: 'M PLUS 2', sans-serif;
+  color: #1c7947;
+}
+
+.container #weatherDiv {
+  background-color: #38a559;
+  height: auto;
+  width: auto;
+  margin-bottom: 1em;
+  border-radius: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container #weatherDiv .currentTemp,
+.currentWeatherCond,
+.weather-location {
+  color: #8fe889;
+  font-family: 'M PLUS 2', sans-serif;
+  font-weight: 800;
+  font-size: 2em;
+  padding: 0.5em;
+}
+
+.weather-header {
+  font-family: 'Anton', sans-serif;
+  font-weight: 800;
+  color: #38a559;
+}
+
+@media screen and (max-width: 600px) {
+  .input-field {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .input-field .btn {
+    margin-top: 5%;
+  }
+
+  .container .current-date {
+    height: auto;
+    text-align: center;
+    border-radius: 1em;
+  }
+
+  .container .current-location {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 30px;
+    border-radius: 1em;
+  }
+
+  .container .alert {
+    word-break: break-all;
+    border-radius: 1em;
+  }
+
+  .fa-clock {
+    font-size: 1.5em;
+    padding-right: 0.2em;
+  }
+
+  .container #weatherDiv {
+    text-align: center;
+    margin: 0 2em 2em;
+    padding: 1.5em;
+  }
+
+  .container #weatherDiv .currentTemp,
+  .currentWeatherCond,
+  .weather-location {
+    color: #8fe889;
+    font-family: 'M PLUS 2', sans-serif;
+    font-weight: 800;
+    font-size: 1.5em;
+  }
+}
