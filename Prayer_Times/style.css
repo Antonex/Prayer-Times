@@ -27,9 +27,12 @@ body {
   min-width: 100vw;
   flex-direction: column;
   align-items: center;
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
+  -webkit-user-select: none;
+  /* Safari */
+  -ms-user-select: none;
+  /* IE 10 and IE 11 */
+  user-select: none;
+  /* Standard syntax */
   overflow-y: hidden;
 }
 
@@ -136,10 +139,6 @@ body {
   display: none;
 }
 
-.active {
-  display: block;
-}
-
 .fa-clock,
 .fa-map-marker-alt,
 .fa-calendar-day {
@@ -217,6 +216,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  opacity: 0;
 }
 
 .container #weatherDiv .currentTemp,
@@ -230,12 +230,27 @@ body {
 }
 
 .weather-header {
-  font-family: 'Anton', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 800;
-  color: #38a559;
+  color: #1c7947;
+}
+
+.loader {
+  height: 15em;
+  width: 20em;
+  border-radius: 2.5em;
+  display: none;
+}
+
+.active {
+  display: block;
 }
 
 @media screen and (max-width: 600px) {
+  .container {
+    text-align: center !important;
+  }
+
   .input-field {
     display: flex;
     align-items: center;
@@ -265,7 +280,7 @@ body {
   }
 
   .fa-clock {
-    font-size: 1.5em;
+    font-size: 2em;
     padding-right: 0.2em;
   }
 

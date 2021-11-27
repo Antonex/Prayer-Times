@@ -14,6 +14,7 @@ const prayerTimeMaghrib = document.querySelector('.maghrib');
 const prayerTimeIsha = document.querySelector('.isha');
 const sunrise = document.querySelector('.sunrise');
 const weatherDiv = document.querySelector('#weatherDiv');
+const loader = document.querySelector('.loader');
 let currentMonthName = document.querySelector('.currentMonthName');
 
 // Defining The Required Functions
@@ -33,16 +34,25 @@ async function buttonClicked() {
       }, 3000);
     }
   } else {
+    //Showing The Loading GIF
+    loader.classList.add('active');
+
     // Fetching The Salat Time Data
     await fetch(`https://muslimsalat.p.rapidapi.com/${inputField.value}.json`, {
-      method: 'GET',
-      headers: {
-        'x-rapidapi-host': 'muslimsalat.p.rapidapi.com',
-        'x-rapidapi-key': '37561f31c9msh44df328ddde2427p1211f2jsn032270109226',
-      },
-    })
-      .then((res) => res.json()) // Transforming the data to JSON format
+        method: 'GET',
+        headers: {
+          'x-rapidapi-host': 'muslimsalat.p.rapidapi.com',
+          'x-rapidapi-key': '37561f31c9msh44df328ddde2427p1211f2jsn032270109226',
+        },
+      })
+      .then((res) => res.json())
       .then((data) => {
+
+        //Removing The Loading GIF
+        setTimeout(function() {
+          loader.classList.remove('active');
+        }, 2500)
+
         showResults(data);
       })
       .catch((err) => console.log(err));
@@ -97,11 +107,11 @@ function showTime() {
   }
 
   if (h >= 12) {
+    h -= 12;
     // Doesn't Show 00 As 12PM
-    if (h - 12 === 0) {
+    if (h - 12 == 0) {
       h = 12;
     }
-    h -= 12;
     session = 'PM';
   }
 
@@ -213,4 +223,5 @@ function showWeather(data) {
   `;
 
   weatherDiv.innerHTML = updatedUI;
+  weatherDiv.style.opacity = 1;
 }

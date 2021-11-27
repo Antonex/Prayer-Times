@@ -1,80 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
-      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="style.css">
-    <script defer src="index.js"></script>
-    <title>Prayer Times</title>
-  </head>
-  <body>
-    <div class="container">
-      <nav class="nav-bar">
-        <a href="#salat-times">Salat Times</a>
-        <a id="weather-btn" href="#weatherDiv">Current Weather</a>
-      </nav>
-      <div class="input-field">
-        <input type="text" id="input-field" placeholder="Enter Your City Name">
-        <button class="btn" id="btn" type="submit">Search</button>
-      </div>
-      <div class="current-time">
-        <i class="far fa-clock"></i>
-        <div class="time-text"> 7:30 PM</span></div>
-      </div>
-      <div class="current-date">
-        <i class="fas fa-calendar-day"></i>
-        <div class="date-text"> <span class="currentDate"></span> <span class="currentMonthName"></span> <span class="currentYear"></span></i></div>
-      </div>
-      <div class="current-location">
-        <i class="fas fa-map-marker-alt"></i>
-        <div class="location-text current-city-text"> Meherpur,</div>
-        <div class="current-country-text">Bangladesh</div>  
-      </div>
-      <div id="alert" class="alert alert-red">
-        <span class="alert-text">
-          Please enter a city name 😐
-        </span>
-      </div>
-      <h1 class="header">
-        Salah Times
-      </h1>
-      <div class="salat-times" id="salat-times">
-        <section class="time">
-          <p class="salat-name">Fajr</p>
-          <p class="salat-time fajr"></p>
-        </section>
-        <section class="time">
-          <p class="salat-name">Sunrise</p>
-          <p class="salat-time sunrise"></p>
-        </section>
-        <section class="time">
-          <p class="salat-name">Dhuhr</p>
-          <p class="salat-time dhuhr"></p>
-        </section>
-        <section class= "time">
-          <p class="salat-name">Asr</p>
-          <p class="salat-time asr"></p>
-        </section>
-        <section class="time"> 
-          <p class="salat-name">Maghrib</p>
-          <p class="salat-time maghrib"></p>  
-        </section>
-        <section class="time">
-          <p class="salat-name">Isha</p>
-          <p class="salat-time isha"></p>
-        </section>
-      </div>
-      <h1 class="weather-header">Current Weather Conditions</h1>
-      <div id="weatherDiv"></div> 
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <script defer src="index.js"></script>
+  <title>Prayer Times</title>
+</head>
+
+<body>
+  <div class="container">
+    <nav class="nav-bar">
+      <a href="#salat-times">Salat Times</a>
+      <a id="weather-btn" href="#weatherDiv">Current Weather</a>
+    </nav>
+    <div class="input-field">
+      <input type="text" id="input-field" placeholder="Enter Your City Name">
+      <button class="btn" id="btn" type="submit">Search</button>
     </div>
-  </body>
+    <div class="current-time">
+      <i class="far fa-clock"></i>
+      <div class="time-text"></span></div>
+    </div>
+    <div class="current-date">
+      <i class="fas fa-calendar-day"></i>
+      <div class="date-text"> <span class="currentDate"></span> <span class="currentMonthName"></span> <span class="currentYear"></span></i></div>
+    </div>
+    <div class="current-location">
+      <i class="fas fa-map-marker-alt"></i>
+      <div class="location-text current-city-text"> Meherpur,</div>
+      <div class="current-country-text">Bangladesh</div>
+    </div>
+    <div id="alert" class="alert alert-red">
+      <span class="alert-text">
+        Please enter a city name 😐
+      </span>
+    </div>
+    <h1 class="header">
+      Salah Times
+    </h1>
+    <div class="salat-times" id="salat-times">
+      <section class="time">
+        <p class="salat-name">Fajr</p>
+        <p class="salat-time fajr"></p>
+      </section>
+      <section class="time">
+        <p class="salat-name">Sunrise</p>
+        <p class="salat-time sunrise"></p>
+      </section>
+      <section class="time">
+        <p class="salat-name">Dhuhr</p>
+        <p class="salat-time dhuhr"></p>
+      </section>
+      <section class="time">
+        <p class="salat-name">Asr</p>
+        <p class="salat-time asr"></p>
+      </section>
+      <section class="time">
+        <p class="salat-name">Maghrib</p>
+        <p class="salat-time maghrib"></p>
+      </section>
+      <section class="time">
+        <p class="salat-name">Isha</p>
+        <p class="salat-time isha"></p>
+      </section>
+    </div>
+    <h1 class="weather-header">Current Weather Conditions</h1>
+    <img src="Assets/loader.gif" alt="" class="loader">
+    <div id="weatherDiv">
+    </div>
+  </div>
+</body>
+
 </html>
- 
