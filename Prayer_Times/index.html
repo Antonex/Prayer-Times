@@ -2,25 +2,33 @@
 <html lang="en">
 
 <head>
+  <title>Prayer Times</title>
+  
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="View today's prayer times, weather and more based on your location." />
+  <meta name="keywords" content="anto, antonex, prayer times, anto prayer times, antonex prayer times, anto weather, weather, antonex prayer times and weather" />
+  <meta name="googlebot" content="index, follow"/>
+  
+  <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css">
-  <script defer src="index.js"></script>
-  <title>Prayer Times</title>
-</head>
 
+</head>
 <body>
+<h1 class="main-title" >Prayer Times | By Anto</h1>
   <div class="container">
-    <nav class="nav-bar">
+    <!--nav class="nav-bar">
       <a href="#salat-times">Salat Times</a>
       <a id="weather-btn" href="#weatherDiv">Current Weather</a>
-    </nav>
+    </nav-->
+    <br>
     <div class="input-field">
       <input type="text" id="input-field" placeholder="Enter Your City Name">
       <button class="btn" id="btn" type="submit">Search</button>
     </div>
+    <br>
     <div class="current-time">
       <i class="far fa-clock"></i>
       <div class="time-text"></span></div>
@@ -39,10 +47,12 @@
         Please enter a city name 😐
       </span>
     </div>
-    <h1 class="header">
+    <br><br>
+    <h2 class="header">
       Salah Times
-    </h1>
+    </h2>
     <div class="salat-times" id="salat-times">
+      <div>
       <section class="time">
         <p class="salat-name">Fajr</p>
         <p class="salat-time fajr"></p>
@@ -67,12 +77,14 @@
         <p class="salat-name">Isha</p>
         <p class="salat-time isha"></p>
       </section>
+      </div>
     </div>
-    <h1 class="weather-header">Current Weather Conditions</h1>
+    <br>
+    <h2 class="weather-header">Current Weather Conditions</h2>
     <img src="Assets/loader.gif" alt="" class="loader">
     <div id="weatherDiv">
     </div>
   </div>
+  <script defer src="index.js"></script>
 </body>
-
 </html>

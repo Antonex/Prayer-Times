@@ -13,10 +13,16 @@ body {
   overflow-x: hidden;
 }
 
+.main-title {
+  position:fixed;
+  z-index:-100000;
+}
+
 .header {
-  font-family: 'M PLUS 2';
+  font-family: 'Anton';
   color: #1c7947;
-  font-weight: 800;
+  font-weight: 150;
+  font-size:2.5em;
 }
 
 .container {
@@ -34,6 +40,7 @@ body {
   user-select: none;
   /* Standard syntax */
   overflow-y: hidden;
+  max-width:100vw;
 }
 
 .container .current-time {
@@ -106,7 +113,12 @@ body {
   text-align: center;
   padding: 0.5em;
   border-radius: 1em;
-  font-family: 'Anton', sans-serif;
+  font-family: 'M PLUS 2', sans-serif;
+  width:15em;
+}
+
+input, button{
+  outline:none;
 }
 
 .container .btn {
@@ -148,9 +160,16 @@ body {
 
 .container .salat-times {
   display: flex;
-  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  max-width:100vw;
+}
+
+.salat-times > div{
+  display:flex;
+  flex-direction:row;
+  overflow-x:scroll;
+  width:auto;
 }
 
 .container .salat-times .time {
@@ -180,8 +199,8 @@ body {
 }
 
 .container .salat-times .salat-name {
-  font-family: 'Anton', sans-serif;
-  font-weight: 800;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 1000;
   font-size: 2em;
   color: #1c7947;
 }
@@ -190,7 +209,7 @@ body {
   font-family: 'M PLUS 2', sans-serif;
   font-weight: 800;
   color: #38a559;
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 .nav-bar {
@@ -230,9 +249,10 @@ body {
 }
 
 .weather-header {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 800;
+  font-family: 'Anton', sans-serif;
+  font-weight: 150;
   color: #1c7947;
+  font-size:2.5em;
 }
 
 .loader {
