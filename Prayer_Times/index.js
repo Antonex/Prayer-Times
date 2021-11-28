@@ -53,7 +53,7 @@ async function buttonClicked() {
           loader.classList.remove('active');
         }, 2500)
 
-        showWeather(data);
+        showResults(data);
       })
       .catch((err) => console.log(err));
 
